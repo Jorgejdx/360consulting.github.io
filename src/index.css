@@ -1,0 +1,108 @@
+/* Fuentes personalizadas */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables CSS personalizadas */
+:root {
+  --primary-navy: #00475E;
+  --primary-teal: #006D77;
+  --accent-gold: #FFD700;
+  --accent-orange: #FF6B35;
+  --secondary-blue: #1E3A8A;
+  --text-dark: #1F2937;
+  --text-light: #6B7280;
+  --background-light: #F9FAFB;
+  --background-dark: #111827;
+}
+
+/* Clases de utilidad personalizadas */
+@layer components {
+  .gradient-hero {
+    @apply bg-gradient-to-br from-teal-800 via-teal-700 to-green-700;
+  }
+  
+  .gradient-secondary {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600;
+  }
+  
+  .gradient-accent {
+    @apply bg-gradient-to-r from-yellow-400 to-orange-500;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent;
+  }
+  
+  .shadow-custom {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .shadow-custom-lg {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Estilos base personalizados */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .font-lato {
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+/* Utilidades de color personalizadas */
+@layer utilities {
+  .bg-primary {
+    background-color: var(--primary-navy);
+  }
+  
+  .bg-secondary {
+    background-color: var(--secondary-blue);
+  }
+  
+  .bg-accent {
+    background-color: var(--accent-gold);
+  }
+  
+  .text-primary {
+    color: var(--primary-navy);
+  }
+  
+  .text-secondary {
+    color: var(--secondary-blue);
+  }
+  
+  .text-accent {
+    color: var(--accent-gold);
+  }
+  
+  .border-primary {
+    border-color: var(--primary-navy);
+  }
+  
+  .border-accent {
+    border-color: var(--accent-gold);
+  }
+} 

@@ -1,0 +1,34 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="600" height="700">
+  <defs>
+    <style type="text/css"><![CDATA[
+      .navy   { fill:#00475E; }
+      .teal   { fill:#009688; }
+      .white  { fill:#FFFFFF; }
+      .bold   { font-family:'Poppins', 'Arial', sans-serif; font-weight:700; }
+      .medium { font-family:'Poppins', 'Arial', sans-serif; font-weight:600; letter-spacing:4px; }
+    ]]></style>
+  </defs>
+
+  <!-- Shield (navy) -->
+  <path class="navy" d="
+       M300 70
+       Q380 70 420 100
+       Q430 110 430 125
+       L430 275
+       Q430 340 300 410
+       Q170 340 170 275
+       L170 125
+       Q170 110 180 100
+       Q220 70 300 70 Z"/>
+
+  <!-- Check mark (white) -->
+  <polyline points="250,240 290,285 360,205" class="white" stroke-width="0"/>
+
+  <!-- Teal arc accent -->
+  <path class="teal" d="M360 245 Q340 305 290 325" stroke-width="0"/>
+
+  <!-- Text -->
+  <text x="300" y="510" font-size="120" text-anchor="middle" class="navy bold">ID360</text>
+  <text x="300" y="590" font-size="60"  text-anchor="middle" class="teal medium">CONSULTING</text>
+</svg>
