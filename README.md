@@ -82,11 +82,14 @@ El proyecto está configurado para generar el build en la carpeta `docs/` para c
 ```typescript
 // vite.config.ts
 export default defineConfig({
+  base: "/360consulting.github.io/",  // Subpath para GitHub Pages
   build: {
     outDir: 'docs'
   }
 });
 ```
+
+**Nota**: La configuración `base` es necesaria porque el repositorio no es `username.github.io`, por lo que GitHub Pages sirve la aplicación desde el subpath `/360consulting.github.io/`.
 
 ## 🚀 Workflow de Despliegue
 
