@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import Home from "@/pages/Home";
 import Contact from "@/pages/Contact";
@@ -16,7 +16,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Layout user={user} handleLogin={handleLogin}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,7 +25,7 @@ const App: React.FC = () => {
           {/* Puedes agregar más rutas aquí */}
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

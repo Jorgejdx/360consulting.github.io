@@ -91,6 +91,28 @@ export default defineConfig({
 
 **Nota**: La configuración `base` es necesaria porque el repositorio no es `username.github.io`, por lo que GitHub Pages sirve la aplicación desde el subpath `/360consulting.github.io/`.
 
+### Enrutamiento
+
+El proyecto usa **HashRouter** en lugar de BrowserRouter para compatibilidad con GitHub Pages:
+
+```typescript
+// src/App.tsx
+import { HashRouter, Routes, Route } from "react-router-dom";
+
+<HashRouter>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/contact" element={<Contact />} />
+    <Route path="/services" element={<Services />} />
+  </Routes>
+</HashRouter>
+```
+
+**URLs de la aplicación**:
+- **Inicio**: `https://360consulting.github.io/360consulting.github.io/#/`
+- **Servicios**: `https://360consulting.github.io/360consulting.github.io/#/services`
+- **Contacto**: `https://360consulting.github.io/360consulting.github.io/#/contact`
+
 ## 🚀 Workflow de Despliegue
 
 El archivo `.github/workflows/deploy.yml` contiene la configuración para:

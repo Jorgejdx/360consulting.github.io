@@ -10,6 +10,15 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'docs'
-  }
+    outDir: 'docs',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
+  server: {
+    port: 5173,
+    host: true,
+  },
 }); 
